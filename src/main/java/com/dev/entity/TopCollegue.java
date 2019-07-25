@@ -2,12 +2,21 @@ package com.dev.entity;
 
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "topCollegue")
 public class TopCollegue {
 
+    @Id
     private String matricule;
     private String nom;
     private String prenoms;
     private String photoUrl;
+    @OneToMany(mappedBy = "topCollegue")
     private Set<Vote> listeVotes;
 
     public TopCollegue() {
