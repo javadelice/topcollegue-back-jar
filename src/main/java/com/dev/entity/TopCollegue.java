@@ -2,12 +2,21 @@ package com.dev.entity;
 
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "topCollegue")
 public class TopCollegue {
 
+    @Id
     private String matricule;
     private String nom;
     private String prenoms;
     private String photoUrl;
+    @OneToMany(mappedBy = "votant")
     private Set<Vote> listeVotes;
 
     public TopCollegue() {
@@ -15,6 +24,10 @@ public class TopCollegue {
 
     public String getMatricule() {
         return matricule;
+    }
+
+    public void addVote(Vote vote) {
+        this.listeVotes.add(vote);
     }
 
     public void setMatricule(String matricule) {
