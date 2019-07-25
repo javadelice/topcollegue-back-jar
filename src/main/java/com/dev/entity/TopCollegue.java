@@ -16,7 +16,7 @@ public class TopCollegue {
     private String nom;
     private String prenoms;
     private String photoUrl;
-    @OneToMany(mappedBy = "topCollegue")
+    @OneToMany(mappedBy = "votant")
     private Set<Vote> listeVotes;
 
     public TopCollegue() {
@@ -24,6 +24,10 @@ public class TopCollegue {
 
     public String getMatricule() {
         return matricule;
+    }
+
+    public void addVote(Vote vote) {
+        this.listeVotes.add(vote);
     }
 
     public void setMatricule(String matricule) {

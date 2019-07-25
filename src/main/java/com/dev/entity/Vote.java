@@ -1,7 +1,8 @@
 package com.dev.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,10 +17,16 @@ public class Vote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-    @JoinColumn(name = "matricule_topCollegue")
+
+    @ManyToOne
+    @JoinColumn(name = "voter")
     private TopCollegue votant;
+
+    @Enumerated(EnumType.STRING)
     private IndicatifVote vote;
+
+    @ManyToOne
+    @JoinColumn(name = "elected")
     private TopCollegue elu;
 
     public Vote() {
