@@ -32,7 +32,8 @@ public class Vote {
     public Vote() {
     }
 
-    public Vote(IndicatifVote vote, TopCollegue elu) {
+    public Vote(TopCollegue votant, IndicatifVote vote, TopCollegue elu) {
+        this.votant = votant;
         this.vote = vote;
         this.elu = elu;
     }
