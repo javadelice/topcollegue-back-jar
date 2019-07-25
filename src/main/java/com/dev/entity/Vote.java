@@ -32,6 +32,12 @@ public class Vote {
     public Vote() {
     }
 
+    public Vote(TopCollegue votant, IndicatifVote vote, TopCollegue elu) {
+        this.votant = votant;
+        this.vote = vote;
+        this.elu = elu;
+    }
+
     public TopCollegue getVotant() {
         return votant;
     }
