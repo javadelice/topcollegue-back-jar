@@ -21,6 +21,23 @@ public class TopCollegue {
 
     public TopCollegue() {
     }
+    
+    public TopCollegue(String matricule, String nom,  String prenoms,  String photoUrl) {
+    	
+    	this.matricule=matricule;
+    	this.nom=nom;
+    	this.prenoms=prenoms;
+    	this.photoUrl=photoUrl;
+    }
+    
+    public TopCollegue(String matricule, String nom,  String prenoms,  String photoUrl, Set<Vote> listeVotes) {
+    	
+    	this.matricule=matricule;
+    	this.nom=nom;
+    	this.prenoms=prenoms;
+    	this.photoUrl=photoUrl;
+    	this.listeVotes=listeVotes;
+    }
 
     public String getMatricule() {
         return matricule;
