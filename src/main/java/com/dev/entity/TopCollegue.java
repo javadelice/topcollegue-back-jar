@@ -34,7 +34,8 @@ public class TopCollegue {
         this.listeVotes = new HashSet<>();
     }
 
-    public TopCollegue(String matricule, String nomUtilisateur, String motDePasse, String nom, String prenoms, String photoUrl, List<String> roles) {
+    public TopCollegue(String matricule, String nomUtilisateur, String motDePasse, String nom, String prenoms,
+            String photoUrl, List<String> roles) {
         this();
         this.matricule = matricule;
         this.nomUtilisateur = nomUtilisateur;
@@ -44,22 +45,22 @@ public class TopCollegue {
         this.photoUrl = photoUrl;
         this.roles = roles;
     }
-    
-    public TopCollegue(String matricule, String nom,  String prenoms,  String photoUrl) {
-    	
-    	this.matricule=matricule;
-    	this.nom=nom;
-    	this.prenoms=prenoms;
-    	this.photoUrl=photoUrl;
+
+    public TopCollegue(String matricule, String nom, String prenoms, String photoUrl) {
+
+        this.matricule = matricule;
+        this.nom = nom;
+        this.prenoms = prenoms;
+        this.photoUrl = photoUrl;
     }
-    
-    public TopCollegue(String matricule, String nom,  String prenoms,  String photoUrl, Set<Vote> listeVotes) {
-    	
-    	this.matricule=matricule;
-    	this.nom=nom;
-    	this.prenoms=prenoms;
-    	this.photoUrl=photoUrl;
-    	this.listeVotes=listeVotes;
+
+    public TopCollegue(String matricule, String nom, String prenoms, String photoUrl, Set<Vote> listeVotes) {
+
+        this.matricule = matricule;
+        this.nom = nom;
+        this.prenoms = prenoms;
+        this.photoUrl = photoUrl;
+        this.listeVotes = listeVotes;
     }
 
     public String getMatricule() {
@@ -146,8 +147,8 @@ public class TopCollegue {
         builder.append(prenoms);
         builder.append(", photoUrl=");
         builder.append(photoUrl);
-        builder.append(", listeVotes=");
-        builder.append(listeVotes);
+        // builder.append(", listeVotes=");
+        // builder.append(listeVotes);
         builder.append("]");
         return builder.toString();
     }
