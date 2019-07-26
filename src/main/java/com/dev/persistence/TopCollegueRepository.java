@@ -11,5 +11,6 @@ import com.dev.entity.TopCollegue;
 public interface TopCollegueRepository extends JpaRepository<TopCollegue, String> {
 
     Optional<TopCollegue> findByNomUtilisateur(String nomUtilisateur);
+    TopCollegue findByMatricule(String matricule);
 
 }

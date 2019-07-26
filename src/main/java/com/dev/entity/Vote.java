@@ -19,6 +19,7 @@ public class Vote {
     private Integer id;
 
     @ManyToOne
+    
     @JoinColumn(name = "voter")
     private TopCollegue votant;
 

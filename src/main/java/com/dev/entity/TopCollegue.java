@@ -11,6 +11,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "topCollegue")
 public class TopCollegue {
@@ -25,6 +27,7 @@ public class TopCollegue {
     @Transient
     private List<String> roles = new ArrayList<>();
     @OneToMany(mappedBy = "votant")
+    @JsonIgnore
     private Set<Vote> listeVotes;
 
     public TopCollegue() {
