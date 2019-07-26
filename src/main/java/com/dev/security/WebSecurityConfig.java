@@ -58,9 +58,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests()
 
                 .antMatchers("/h2-console/**").permitAll()
-                // TODO JUSTE POUR TESTER !!!!!
-                // A SUPPRIMER
-                .antMatchers("/topcollegues/score/**").permitAll()
 
                 .antMatchers(HttpMethod.POST, "/topcollegues/auth").permitAll()
 
