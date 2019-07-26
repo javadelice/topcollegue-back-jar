@@ -39,5 +39,7 @@ public class TopCollegueController {
     public List<Vote> getVotes() {
         return voteRepository.findAll();
     }
+    
+    
 
 }
